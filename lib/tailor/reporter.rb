@@ -14,7 +14,7 @@ class Tailor
       @formatters = []
 
       formats.flatten.each do |formatter|
-        require_relative "formatters/#{formatter}"
+        require "tailor/formatters/#{formatter}"
         @formatters << eval("Tailor::Formatters::#{formatter.capitalize}.new")
       end
     end

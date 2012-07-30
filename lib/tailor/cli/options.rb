@@ -168,11 +168,9 @@ class Tailor
           opt.separator ""
           opt.separator "Common options:"
 
-=begin
           opt.on('-f', '--format FORMATTER') do |format|
             options.formatters << format
           end
-=end
 
           opt.on('--[no-]color', "Output in color") do |color|
             @output_color = color
